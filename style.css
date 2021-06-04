@@ -1,0 +1,237 @@
+
+body{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(assets/healing_deliverance.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header .wrapper .row{
+    align-items: flex-start;
+    margin: 20px auto;
+}
+
+.logo{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    float: left;
+}
+
+.logo p{
+    font-size: 12pt;
+    line-height: 18pt;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    margin-left: 10px;
+}
+
+nav ul{
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+    position: relative;
+    margin-right: 20px;
+}
+
+nav ul li{
+    text-transform: uppercase;
+    font-size: 9.5pt;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    padding: 7px 20px;
+}
+
+nav ul li:hover{
+    border: 1px solid #fff;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 100px;
+}
+
+.footer .links{
+    display: flex;
+    flex-direction: row;
+}
+
+.foot-link a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.foot-link{
+    width: 300px;
+    padding: 10px 20px 5px 20px;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 18pt;
+    font-family: 'Bebas Neue';
+    font-weight: bolder;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+
+.foot-link:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.icon{
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.icon a:hover{
+    color: red;
+}
+
+
+#cancel{
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.nav-toggler{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#hamburger, #cancel{
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1560px) {
+    .nav-toggler{
+        display: flex;
+    }
+
+    nav{
+        visibility: hidden;
+        opacity: 0;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        height: 100vh;
+        width: 100%;
+        margin: 0px;
+        background-color: red;
+        position: relative;
+        padding-top: 50px;
+        box-sizing: border-box;
+        z-index: 99;
+    }
+
+    nav ul li{
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    header .wrapper .row #check:checked ~ label #cancel{
+        display: block;
+    }
+
+
+    header .wrapper .row #check:checked ~ nav{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    header .wrapper .row #check:checked ~ label #hamburger{
+        display: none;
+    }
+
+    
+
+    .logo p{
+        font-size: 9pt;
+        line-height: 16pt;
+        font-family: 'Sarala', sans-serif;
+        font-weight: 700;
+        color: #fff;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .foot-link{
+        width: 70%vw;
+    }
+
+    .footer .links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        bottom: 50px;
+    }
+}
